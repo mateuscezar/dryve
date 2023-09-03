@@ -20,6 +20,10 @@ yarn test
 ```
 ## Observações
 
+Atualmente apenas a página de veículo e o formulário presente no botão de adicionar estão feitos conforme o solicitado.
+
+Na listagem de veículo, a paginação suporta uma quantidade maior de registro e vai se adaptando de acordo com a visualização do usuário.
+
 O endpoint não retorna algumas informações como placa, ref, imagens, contatos, entre outras.
 As informações ausentes no endpoint foram mockadas para fins de demonstração e teste.
 
@@ -28,5 +32,11 @@ As informações ausentes no endpoint foram mockadas para fins de demonstração
 Você pode visualizar a execução do projeto no seguinte link:
 
 [Visualizar o Projeto](https://dryve-tlhv-mateuscezar.vercel.app/)
+
+## Imagens
+
+![Listagem de veículo com menu contraído](https://i.imgur.com/8k8Llix.png)
+![Listagem de veículo com menu expandido](https://i.imgur.com/xI2Qqx0.png)
+![Formulário de veículo](https://i.imgur.com/AZEEBPz.png)
 
 Feito com amor!
