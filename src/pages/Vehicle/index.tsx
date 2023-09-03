@@ -58,7 +58,7 @@ export function Vehicle() {
 
   useEffect(() => {
     axios
-      .get("http://www.mocky.io/v2/5eb553df31000060006994a8")
+      .get("https://www.mocky.io/v2/5eb553df31000060006994a8")
       .then((response) => {
         setVehicles(response.data);
         setVehiclesFiltered(response.data);
