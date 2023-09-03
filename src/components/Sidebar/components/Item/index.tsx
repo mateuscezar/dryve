@@ -5,15 +5,24 @@ interface SidebarItem {
   name: string;
   isActive: boolean;
   isCollapse: boolean;
-  onClick: (index:number)=>void;
+  onClick: () => void;
 }
 
-export function Item({icon, name, isActive, isCollapse, onClick}: SidebarItem) {
-  
-    return (
-        <SidebarItem isActive={isActive} isCollapse={isCollapse} onClick={() => onClick()}>
-          <img src={icon} alt="" style={{width: 24}}></img>
-          {!isCollapse ? name : ''}
-        </SidebarItem>
-    )
+export function Item({
+  icon,
+  name,
+  isActive,
+  isCollapse,
+  onClick,
+}: SidebarItem) {
+  return (
+    <SidebarItem
+      isActive={isActive}
+      isCollapse={isCollapse}
+      onClick={() => onClick()}
+    >
+      <img src={icon} alt="" style={{ width: 24 }}></img>
+      {!isCollapse ? name : ""}
+    </SidebarItem>
+  );
 }

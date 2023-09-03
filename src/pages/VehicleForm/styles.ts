@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { ButtonType, LineType } from "../../types/types";
 
 export const PageContainer = styled.div`
   display: flex;
@@ -183,9 +184,9 @@ export const Input = styled(BaseInput)`
   width: ${(props) => props["width"]};
 `;
 
-export const Line = styled.div`
+export const Line = styled.div<LineType>`
   display: flex;
-  width: ${(props) => props["width"]};
+  width: ${(props) => props["customWidth"]};
   padding: 0.5rem 0rem;
   justify-content: space-between;
 `;
@@ -202,7 +203,7 @@ export const InfoInlineArea = styled.div`
   }
 `;
 
-export const ButtonSelect = styled.div`
+export const ButtonSelect = styled.div<ButtonType>`
   display: inline-flex;
   padding: 0.5rem 1rem;
   flex-direction: column;
@@ -222,7 +223,7 @@ export const ButtonSelect = styled.div`
   }
 `;
 
-export const ButtonTags = styled.div`
+export const ButtonTags = styled.div<ButtonType>`
   display: inline-flex;
   padding: 0.5rem 1rem;
   margin-top: 8px;
@@ -342,7 +343,7 @@ export const ContactContainer = styled.div`
   overflow: overlay;
 `;
 
-export const ContactAvatar = styled.div`
+export const ContactAvatar = styled.div<ButtonType>`
   display: flex;
   justify-content: center;
   align-items: center;

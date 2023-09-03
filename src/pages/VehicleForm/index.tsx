@@ -65,12 +65,7 @@ export function VehicleForm() {
   const [classification, setClassification] = useState("A");
   const [isModalTagOpen, setIsModalTagOpen] = useState(false);
 
-  const {
-    register,
-    setValue,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormData>();
+  const { handleSubmit } = useForm<FormData>();
   const onSubmit = handleSubmit((data) => console.log(data));
 
   const toggleModal = () => {
@@ -148,7 +143,7 @@ export function VehicleForm() {
                   Seminovo
                 </RadioGroup>
 
-                <Line width="14.5rem">
+                <Line customWidth="14.5rem">
                   <InputGroup>
                     <label>Placa</label>
                     <Input type="text" name="plate" width="6.5rem" />
@@ -160,7 +155,7 @@ export function VehicleForm() {
                   </InputGroup>
                 </Line>
 
-                <Line width="100%">
+                <Line customWidth="100%">
                   <InputGroup>
                     <label>Marca</label>
                     <Input type="text" name="brand" width="14.5rem" />
@@ -172,7 +167,7 @@ export function VehicleForm() {
                   </InputGroup>
                 </Line>
 
-                <Line width="100%">
+                <Line customWidth="100%">
                   <InputGroup>
                     <label>Carroceria</label>
                     <Input type="text" name="bodywork" width="14.5rem" />
@@ -189,14 +184,14 @@ export function VehicleForm() {
                   </InputGroup>
                 </Line>
 
-                <Line width="100%">
+                <Line customWidth="100%">
                   <InputGroup>
                     <label>Versão</label>
                     <Input type="text" name="bodywork" width="30rem" />
                   </InputGroup>
                 </Line>
 
-                <Line width="100%">
+                <Line customWidth="100%">
                   <InputGroup>
                     <label>Combustível</label>
                     <Input type="text" name="fuel" width="14.5rem" />
@@ -208,7 +203,7 @@ export function VehicleForm() {
                   </InputGroup>
                 </Line>
 
-                <Line width="100%">
+                <Line customWidth="100%">
                   <InputGroup>
                     <label>Quilometragem</label>
                     <Input type="text" name="km" width="14.5rem" />
@@ -224,14 +219,14 @@ export function VehicleForm() {
               <fieldset>
                 <legend>Acessórios</legend>
 
-                <Line width="100%">
+                <Line customWidth="100%">
                   <Select
                     defaultValue={[carAccessories[0]]}
                     isMulti
                     name="accs"
                     options={carAccessories}
                     styles={{
-                      control: (baseStyles, state) => ({
+                      control: (baseStyles) => ({
                         ...baseStyles,
                         width: "30rem",
                         borderRadius: "6px",
@@ -244,14 +239,14 @@ export function VehicleForm() {
               <fieldset>
                 <legend>Características</legend>
 
-                <Line width="100%">
+                <Line customWidth="100%">
                   <Select
                     defaultValue={[carFeatures[0]]}
                     isMulti
                     name="accs"
                     options={carFeatures}
                     styles={{
-                      control: (baseStyles, state) => ({
+                      control: (baseStyles) => ({
                         ...baseStyles,
                         width: "30rem",
                         borderRadius: "6px",
@@ -264,7 +259,7 @@ export function VehicleForm() {
               <fieldset>
                 <legend>Localização</legend>
 
-                <Line width="100%">
+                <Line customWidth="100%">
                   <InputGroup>
                     <label>Estado</label>
                     <Input type="text" name="brand" width="10.5rem" />
@@ -325,7 +320,7 @@ export function VehicleForm() {
 
               <SellingGridContainer>
                 <PriceMaxArea>
-                  <Line width="100%">
+                  <Line customWidth="100%">
                     <InputGroup>
                       <label>Preço máximo</label>
                       <Input type="text" name="bodywork" width="14rem" />
@@ -333,7 +328,7 @@ export function VehicleForm() {
                   </Line>
                 </PriceMaxArea>
                 <PriceMinArea>
-                  <Line width="100%">
+                  <Line customWidth="100%">
                     <InputGroup>
                       <label>Preço mínimo</label>
                       <Input type="text" name="bodywork" width="14rem" />

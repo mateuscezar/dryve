@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { SideBarType } from "../../types/types";
 
-export const SidebarContainer = styled.nav`
+export const SidebarContainer = styled.nav<SideBarType>`
   width: ${(props) => (props.isCollapse ? "6rem" : "18rem")};
   max-height: 89rem;
   background: ${(props) => props.theme["white"]};
@@ -22,7 +23,7 @@ export const SidebarContainer = styled.nav`
   }
 `;
 
-export const SidebarFooter = styled.div`
+export const SidebarFooter = styled.div<SideBarType>`
   display: flex;
   position: relative;
   bottom: 0px;
