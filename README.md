@@ -39,4 +39,4 @@ Você pode visualizar a execução do projeto no seguinte link:
 ![Listagem de veículo com menu expandido](https://i.imgur.com/xI2Qqx0.png)
 ![Formulário de veículo](https://i.imgur.com/AZEEBPz.png)
 
-Feito com amor!
+As demais páginas se encontram em manutenção ;)
